@@ -5,7 +5,8 @@ import './globals.css';
 
 // Self-hosted at build time: no request to Google when the page loads.
 const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo', display: 'swap' });
-const instrumentSans = Instrument_Sans({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-instrument-sans', display: 'swap' });
+// Loaded as a variable font (no fixed weights): listing weights broke Vercel's build.
+const instrumentSans = Instrument_Sans({ subsets: ['latin'], variable: '--font-instrument-sans', display: 'swap' });
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
   weight: '400',
