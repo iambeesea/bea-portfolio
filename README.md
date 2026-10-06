@@ -1,14 +1,16 @@
 # Bea Portfolio
 
-Portfolio home page for Bea, designed in Claude Design.
+Bea Capule's portfolio, designed in Claude Design (project "Bea Portfolio (Try)").
 
-- `index.html` — the standalone static page. Open it in a browser, or serve the folder with any static host (GitHub Pages works as-is).
-- `design/` — the Claude Design canvas source (`Main.dc.html`, `canvas.json`) the page was exported from.
+## Files
 
-Design canvas: https://claude.ai/artifact/3GnBCGxokTs1ajkzZSw1U4 (private to its owner unless shared).
+- `Portfolio Mockups.dc.html` — the design itself, exported from Claude Design.
+- `support.js` — the Claude Design runtime the design file needs in order to render.
+- `assets/` — the two photos the design uses.
+- `index.html` — redirects to the design file so the folder opens at its root.
 
-## Still to fill in
+## Viewing it
 
-Everything in `[BRACKETS]` is a placeholder: role, city, intro, the four projects and their images, portrait, bio, skills, experience, email and social links.
+Serve the folder with any static file server and open the root URL. Opening the file straight from disk may not work, because the design loads `support.js` and its fonts and icons over HTTP.
 
-The accent colour is the `--accent` variable at the top of `index.html`.
+This is the design prototype as exported, not a production build.
