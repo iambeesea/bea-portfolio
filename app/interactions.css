@@ -1,0 +1,51 @@
+/* Hover and focus styles carried over from the design. */
+.px-f0:focus {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 2px !important;
+}
+.px-h1:hover {
+  color: var(--ink) !important;
+  transform: translateY(-1px) !important;
+}
+.px-h2:hover {
+  background: rgba(var(--ink-rgb), 0.12) !important;
+  border-color: rgba(var(--ink-rgb), 0.32) !important;
+}
+.px-h3:hover {
+  transform: scale(1.02) !important;
+}
+.px-f4:focus {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: -2px !important;
+}
+.px-h5:hover {
+  border-color: rgba(var(--ink-rgb), 0.4) !important;
+}
+.px-f6:focus {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 3px !important;
+}
+.px-f7:focus {
+  outline: 1px solid var(--accent) !important;
+  outline-offset: 6px !important;
+}
+.px-f8:focus {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 4px !important;
+}
+.px-h9:hover {
+  color: var(--ink) !important;
+  border-color: rgba(var(--ink-rgb), 0.34) !important;
+}
+.px-fa:focus {
+  border-color: var(--accent) !important;
+}
+.px-hb:hover {
+  border-color: rgba(var(--ink-rgb), 0.5) !important;
+  background: rgba(var(--ink-rgb), 0.06) !important;
+}
+.px-hc:hover {
+  transform: scale(1.03) !important;
+  background: rgba(var(--ink-rgb), 0.12) !important;
+  border-color: rgba(var(--ink-rgb), 0.45) !important;
+}

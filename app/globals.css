@@ -1,0 +1,209 @@
+/* Tailwind without its preflight reset: the portfolio's sections carry their
+   own precise styles from the design, and a global reset would shift them. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@import './interactions.css';
+
+/* Design tokens. Dark is the default; light is opt-in via data-theme. */
+:root {
+  --bg: #1b0230;
+  --panel: #230339;
+  --well: #2c0843;
+  --well2: #27063c;
+  --deep: #0e0118;
+  --line: #3a1052;
+  --line2: #5a2170;
+  --ink: #f7e6ee;
+  --ink2: #f2d4e0;
+  --ink3: #e3c3d6;
+  --body: #d3aec8;
+  --muted: #b889b0;
+  --accent: #c574b0;
+  --glow: #fff3ec;
+  --ink-rgb: 242, 212, 224;
+  --bg-rgb: 27, 2, 48;
+  --deep-rgb: 14, 1, 24;
+  --panel-rgb: 35, 3, 57;
+  --glow-rgb: 255, 243, 236;
+  --accent-rgb: 197, 116, 176;
+  color-scheme: dark;
+
+  --wide: var(--font-archivo), system-ui, sans-serif;
+  --sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --serif: var(--font-instrument-serif), Georgia, serif;
+}
+
+:root[data-theme='light'] {
+  --bg: #f6eef0;
+  --panel: #efe3e8;
+  --well: #e7d8e0;
+  --well2: #e1d0da;
+  --deep: #ece0e6;
+  --line: #dcc8d3;
+  --line2: #c8abbe;
+  --ink: #2a0f33;
+  --ink2: #3a1846;
+  --ink3: #4e2a5a;
+  --body: #56385e;
+  --muted: #72557a;
+  --accent: #93447f;
+  --glow: #8a3c79;
+  --ink-rgb: 42, 15, 51;
+  --bg-rgb: 246, 238, 240;
+  --deep-rgb: 236, 224, 230;
+  --panel-rgb: 246, 238, 240;
+  --glow-rgb: 147, 68, 127;
+  --accent-rgb: 147, 68, 127;
+  color-scheme: light;
+}
+
+/* Expose the tokens to Tailwind: bg-bg, text-ink, border-line, font-wide … */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-well: var(--well);
+  --color-deep: var(--deep);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-wide: var(--wide);
+  --font-sans: var(--sans);
+  --font-serif: var(--serif);
+}
+
+@layer base {
+  /* Smooth colour change while the theme switches. */
+  :root[data-theming] * {
+    transition:
+      background-color 320ms ease,
+      color 320ms ease,
+      border-color 320ms ease,
+      fill 320ms ease,
+      stroke 320ms ease !important;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes curtain {
+  0%,
+  42% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes introLine {
+  from {
+    opacity: 0;
+    transform: translateY(105%);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+@keyframes maskLine {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes panelIn {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12vh, 0) scale(0.95);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+@keyframes steam {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: translateY(2px);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateY(-3px);
+  }
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
