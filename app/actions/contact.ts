@@ -2,6 +2,7 @@
 
 import { createHash } from 'node:crypto';
 import { headers } from 'next/headers';
+import { notifyNewMessage } from '@/lib/notify';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { parseContact } from '@/lib/validation/contact';
 import { site } from '@/lib/site';
@@ -58,6 +59,7 @@ export async function sendContactMessage(form: FormData): Promise<ContactResult>
       user_agent: requestHeaders.get('user-agent')?.slice(0, 400) ?? null,
     });
     if (error) throw error;
+    await notifyNewMessage(parsed.data);
   } catch (error) {
     console.error('[contact] could not store message:', error);
     return { ok: false, message: `Something went wrong on my side. ${emailMe}` };

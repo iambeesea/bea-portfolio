@@ -83,7 +83,7 @@ Set a project's `thumbnail_url` to a file in the `portfolio` bucket to give its 
 2. In the SQL editor, run `supabase/migrations/20261006000000_portfolio.sql`, then `supabase/seed.sql`.
 3. Copy `.env.example` to `.env.local` and fill in the values from Project Settings → API.
 
-Contact messages arrive in the `contact_messages` table; nothing emails you when one comes in. Check the table in the dashboard, or add a Supabase database webhook if you want a notification.
+Contact messages arrive in the `contact_messages` table. If `RESEND_API_KEY` is set, each one is also emailed to you through Resend, with the visitor as the reply-to address.
 
 ## Environment variables
 
@@ -93,6 +93,9 @@ Contact messages arrive in the `contact_messages` table; nothing emails you when
 | `NEXT_PUBLIC_SUPABASE_URL` | For Supabase | Project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | For Supabase | Public key; limited by Row Level Security to reading published content |
 | `SUPABASE_SERVICE_ROLE_KEY` | For the contact form | Secret, server only; stores contact messages |
+| `RESEND_API_KEY` | For email notifications | Secret, server only; emails you each new contact message |
+| `CONTACT_NOTIFY_EMAIL` | No | Where notifications go; defaults to the email in `lib/site.ts` |
+| `CONTACT_FROM_EMAIL` | No | Sender address, once a domain is verified in Resend |
 | `CONTACT_IP_SALT` | No | Random string that salts the hashed sender address used for rate limiting |
 
 Never commit real keys. `.env*` files are ignored by git, except `.env.example`.
