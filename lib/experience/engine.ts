@@ -3403,6 +3403,7 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
       caseOpen: ci !== null,
       caseAria: cp ? cp.name + ' case study' : '',
       caseName: cp ? cp.name : '',
+      caseThumb: cp ? cp.thumbnailUrl || '' : '',
       caseNum: cp ? String(ci + 1).padStart(2, '0') : '',
       caseTotal: String(this.projects.length).padStart(2, '0'),
       caseDesc: cp ? cp.description || 'One or two sentences on what ' + cp.name + ' is. [PH]' : '',

@@ -1,6 +1,7 @@
 // Generated from the Claude Design export, then maintained by hand.
 import { Fragment } from 'react';
 import { txt, list } from '@/lib/experience/view';
+import Image from 'next/image';
 import type { ViewModel } from '@/lib/experience/view';
 export function CaseStudy({ v }: { v: ViewModel }) {
   return (
@@ -130,10 +131,20 @@ export function CaseStudy({ v }: { v: ViewModel }) {
             transformOrigin: '0 0',
           }}
         >
-          <span style={{ fontSize: '13px', color: 'var(--muted)' }}>
-            {txt(v.caseName)}
-            {' · hero image [PH]'}
-          </span>
+          {v.caseThumb ? (
+            <Image
+              src={v.caseThumb}
+              alt={`${v.caseName} — screenshot of the project`}
+              fill
+              sizes="(max-width: 900px) 94vw, 1100px"
+              style={{ objectFit: 'cover', objectPosition: '50% 0%' }}
+            />
+          ) : (
+            <span style={{ fontSize: '13px', color: 'var(--muted)' }}>
+              {txt(v.caseName)}
+              {' · hero image [PH]'}
+            </span>
+          )}
         </div>
         <div data-cfade={'1'} style={{ marginTop: 'clamp(36px,6vh,64px)' }}>
           {list(v.caseSections).map((sec, i0) => (
