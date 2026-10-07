@@ -11,6 +11,7 @@ export const fallbackContent: PortfolioContent = {
   projects: [
     {
       slug: 'sinag',
+      thumbnailUrl: '/images/projects/sinag.webp',
       name: 'SINAG',
       tag: 'Civic platform',
       role: 'Full-Stack Developer',
