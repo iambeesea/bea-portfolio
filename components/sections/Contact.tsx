@@ -164,10 +164,10 @@ export function Contact({ v }: { v: ViewModel }) {
             <a
               className="px-f8"
               data-cpill={'3'}
-              href={'#'}
+              href={'/resume/Beatrice-Capule-Resume.pdf'}
               target={'_blank'}
               rel={'noopener'}
-              aria-label={'Resume (file not linked yet)'}
+              aria-label={'Resume (PDF, opens in a new tab)'}
               onMouseEnter={v.cpIn3}
               onMouseLeave={v.cpOut}
               onFocus={v.cpIn3}
@@ -176,8 +176,7 @@ export function Contact({ v }: { v: ViewModel }) {
                 `position:${v.cpPos ?? ''};left:${v.cpL3 ?? ''};top:${v.cpT3 ?? ''};display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;border-radius:999px;font-family:var(--wide);font-stretch:110%;letter-spacing:-.01em;transform:rotate(${v.cpR3 ?? ''});will-change:transform;transition:background-color 260ms ease,border-color 260ms ease,color 260ms ease;z-index:1;padding:clamp(9px,1.4vh,14px) clamp(16px,1.8vw,22px);font-size:clamp(15px,min(1.5vw,2.5vh),20px);font-weight:600;background:transparent;color:var(--ink);border:1px solid rgba(var(--ink-rgb),.28)`,
               )}
             >
-              {'Resume '}
-              <span style={{ fontFamily: 'var(--sans)', fontSize: '.55em', color: 'var(--muted)' }}>{'[PH]'}</span>
+              {'Resume'}
               <span
                 aria-hidden={'true'}
                 data-cparrow={'1'}
