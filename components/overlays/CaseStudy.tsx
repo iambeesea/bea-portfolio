@@ -212,7 +212,9 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                         style={{
                           position: 'relative',
                           aspectRatio: '4/3',
-                          background: 'repeating-linear-gradient(135deg,var(--well) 0 12px,var(--well2) 12px 24px)',
+                          background: f?.image
+                            ? 'var(--well)'
+                            : 'repeating-linear-gradient(135deg,var(--well) 0 12px,var(--well2) 12px 24px)',
                           display: 'grid',
                           placeItems: 'center',
                           fontSize: '12px',
@@ -224,8 +226,9 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                             src={f.image}
                             alt={`${v.caseName} — ${f.text}`}
                             fill
-                            sizes="(max-width: 700px) 90vw, 540px"
-                            style={{ objectFit: 'cover', objectPosition: '0% 0%' }}
+                            sizes="(max-width: 700px) 90vw, 1100px"
+                            // The whole screenshot, letterboxed, so nothing important is cropped.
+                            style={{ objectFit: 'contain' }}
                           />
                         ) : (
                           'Screenshot [PH]'

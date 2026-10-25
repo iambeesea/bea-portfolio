@@ -88,6 +88,9 @@ export const fallbackContent: PortfolioContent = {
     },
     {
       slug: 'tidy-teens',
+      thumbnailUrl: '/images/projects/tidy-teens.webp',
+      features: ['Top-down room levels with a live score and three bomb lives.'],
+      featureImages: ['/images/projects/tidy-teens-gameplay.webp'],
       name: 'Tidy Teens',
       tag: '2D game',
       role: 'Game Developer',
