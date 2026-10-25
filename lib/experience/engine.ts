@@ -3415,27 +3415,18 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
             cp.year && { k: 'Year', v: cp.year },
           ].filter(Boolean)
         : [],
+      // Case study: Overview and My role, then Key features (only when the project
+      // has some), then Tech stack. Sections are numbered in the order shown.
       caseSections: cp
         ? [
-            { num: '01', label: 'Overview', body: cp.overview || 'What it does, who it serves, and why it exists. [PH]' },
-            { num: '02', label: 'The problem', body: cp.problem || 'The real problem this project set out to solve. [PH]' },
-            {
-              num: '03',
-              label: 'My role',
-              body: cp.roleDetail || (cp.role ? cp.role + ' — describe exactly what you owned. [PH]' : '[PH]'),
-            },
-            { num: '04', label: 'The solution', body: cp.solution || 'How the product addresses the problem. [PH]' },
-            { num: '05', label: 'Process', body: cp.process || 'Only the steps that actually happened. [PH]' },
-            { num: '06', label: 'Challenges & learnings', body: cp.learnings || 'What was hard, and what you took away. [PH]' },
-            { num: '07', label: 'Outcome', body: cp.outcome || 'Real outcomes only — shipped, users, results. [PH]' },
-          ]
+            { num: '01', label: 'Overview', body: cp.overview || cp.description },
+            { num: '02', label: 'My role', body: cp.roleDetail || cp.role },
+          ].filter((s) => s.body)
         : [],
-      caseShowFeatures: !!cp && cp.showFeatures !== false,
-      caseStackNum: cp && cp.showFeatures === false ? '08' : '09',
-      caseFeatures: (cp && cp.features && cp.features.length
-        ? cp.features
-        : ['Feature description [PH]', 'Feature description [PH]', 'Feature description [PH]']
-      ).map((text, i) => ({ text, image: (cp && cp.featureImages && cp.featureImages[i]) || '' })),
+      caseShowFeatures: !!cp && cp.showFeatures !== false && !!(cp.features && cp.features.length),
+      caseFeaturesNum: '03',
+      caseStackNum: cp && cp.showFeatures !== false && cp.features && cp.features.length ? '04' : '03',
+      caseFeatures: cp && cp.features ? cp.features.map((text, i) => ({ text, image: (cp.featureImages && cp.featureImages[i]) || '' })) : [],
       caseStack: cp && cp.stack && cp.stack.length ? cp.stack : ['Add technologies [PH]'],
       caseLinks: cp
         ? [cp.liveUrl && { label: 'Live site', url: cp.liveUrl }, cp.githubUrl && { label: 'GitHub', url: cp.githubUrl }].filter(Boolean)

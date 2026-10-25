@@ -31,7 +31,7 @@ export const fallbackContent: PortfolioContent = {
         'Render',
       ],
       overview:
-        'A MERN-based platform for SK Bulihan covering youth services, event registration, reservations, assistance requests, public disclosures, concerns, and administrative workflows.',
+        'A MERN-based platform for SK Bulihan covering youth services, event registration, reservations, assistance requests, public disclosures, concerns, and administrative workflows. Evaluated by 21 users with a System Usability Scale score of 84.53 (Grade A).',
       roleDetail: 'Designed and built the platform as its full-stack developer.',
       outcome: 'Evaluated by 21 users with a System Usability Scale score of 84.53 (Grade A).',
       thumbnailUrl: '/images/projects/sinag.webp',

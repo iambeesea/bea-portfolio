@@ -201,7 +201,7 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                   color: 'var(--accent)',
                 }}
               >
-                <span>{'08'}</span>
+                <span>{txt(v.caseFeaturesNum)}</span>
                 <span style={{ color: 'var(--ink2)' }}>{'Key features'}</span>
               </div>
               <div style={{ marginTop: '20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '14px' }}>
