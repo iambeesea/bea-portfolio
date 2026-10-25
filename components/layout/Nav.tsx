@@ -169,6 +169,19 @@ export function Nav({ v }: { v: ViewModel }) {
           >
             {'Contact'}
           </button>
+          {v.showCta ? (
+            <a
+              href="/services"
+              className="px-h1 px-f0"
+              onMouseEnter={v.curOn}
+              onMouseLeave={v.curOff}
+              style={css(
+                `position:relative;z-index:1;display:flex;align-items:center;gap:6px;min-height:38px;padding:${v.navPad ?? ''};border-radius:999px;white-space:nowrap;font-size:${v.navFont ?? ''};letter-spacing:.01em;font-weight:400;color:var(--muted);transition:color 220ms ease,transform 220ms ease`,
+              )}
+            >
+              {'Services'}
+            </a>
+          ) : null}
         </div>
         <div style={{ justifySelf: 'end', display: 'flex', alignItems: 'center', gap: '8px' }}>
           <button

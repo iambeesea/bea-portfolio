@@ -2183,6 +2183,10 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
     }
     let show = this.SHOW_INTRO;
     try {
+      // A direct link to a case study (#work/slug) goes straight to it.
+      if (/^#work\//.test(location.hash || '')) show = false;
+    } catch (e) {}
+    try {
       if (show && this.INTRO_ONCE_PER_SESSION && sessionStorage.getItem('bec.intro') === '1') show = false;
     } catch (e) {}
     if (show) {

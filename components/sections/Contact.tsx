@@ -68,6 +68,11 @@ export function Contact({ v }: { v: ViewModel }) {
             >
               {'Have an idea, opportunity, collaboration, or just want to say hello? I’d love to hear from you.'}
             </p>
+            <p style={{ margin: '12px 0 0', fontSize: 'clamp(14px,1.2vw,16px)' }}>
+              <a href="/services" style={{ color: 'var(--accent)', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
+                {'See what I can do for you →'}
+              </a>
+            </p>
             <p
               style={css(
                 `display:${v.cpItalic ?? ''};margin:10px 0 0;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--muted)`,
