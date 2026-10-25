@@ -201,7 +201,7 @@ export const fallbackContent: PortfolioContent = {
       tags: ['Social media design', 'Junior Digital Designer'],
       ar: '16 / 10',
       description: 'Educational social media posts for KATA Systems Consulting Inc.',
-      stack: ['Adobe Photoshop'],
+      stack: ['Adobe Photoshop', 'Canva'],
       features: [
         'Educational carousels that explain systems topics, such as ERP, in plain language.',
         'Instagram Stories for audience engagement, like the KATA Check-in question box.',
