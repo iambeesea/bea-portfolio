@@ -19,6 +19,7 @@ export type ProjectRow = {
   learnings: string | null;
   outcome: string | null;
   features: string[];
+  feature_images: string[];
   stack: string[];
   tags: string[];
   project_url: string | null;
@@ -80,6 +81,7 @@ export type Database = {
           | 'status'
           | 'sort_order'
           | 'features'
+          | 'feature_images'
           | 'stack'
           | 'tags'
           | 'aspect_ratio'

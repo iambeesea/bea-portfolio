@@ -54,6 +54,12 @@ export const fallbackContent: PortfolioContent = {
     },
     {
       slug: 'farm-to-table',
+      thumbnailUrl: '/images/projects/farm-to-table.webp',
+      features: [
+        'Sales reports for administrators, filterable by period, listing each product’s price, quantity sold and income, with the total.',
+        'Customer sign-up and authentication, with separate customer and administrator access.',
+      ],
+      featureImages: ['/images/projects/farm-to-table-sales.webp', '/images/projects/farm-to-table-signup.webp'],
       name: 'Farm to Table',
       tag: 'Marketplace',
       role: 'Full-Stack Developer',

@@ -210,6 +210,7 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                     <div style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid var(--line)', background: 'var(--panel)' }}>
                       <div
                         style={{
+                          position: 'relative',
                           aspectRatio: '4/3',
                           background: 'repeating-linear-gradient(135deg,var(--well) 0 12px,var(--well2) 12px 24px)',
                           display: 'grid',
@@ -218,10 +219,20 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                           color: 'var(--muted)',
                         }}
                       >
-                        {'Screenshot [PH]'}
+                        {f?.image ? (
+                          <Image
+                            src={f.image}
+                            alt={`${v.caseName} — ${f.text}`}
+                            fill
+                            sizes="(max-width: 700px) 90vw, 540px"
+                            style={{ objectFit: 'cover', objectPosition: '0% 0%' }}
+                          />
+                        ) : (
+                          'Screenshot [PH]'
+                        )}
                       </div>
                       <p style={{ margin: '0', padding: '14px 16px', fontSize: '14px', lineHeight: '1.6', color: 'var(--body)' }}>
-                        {txt(f)}
+                        {txt(f?.text)}
                       </p>
                     </div>
                   </Fragment>

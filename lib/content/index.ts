@@ -20,6 +20,7 @@ function toProject(row: ProjectRow): Project {
     stack: row.stack,
     features: row.features.length ? row.features : undefined,
     showFeatures: row.show_features,
+    featureImages: row.feature_images.length ? row.feature_images : undefined,
     overview: optional(row.overview),
     problem: optional(row.problem),
     roleDetail: optional(row.role_detail),

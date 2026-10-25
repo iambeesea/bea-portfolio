@@ -3432,10 +3432,10 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
         : [],
       caseShowFeatures: !!cp && cp.showFeatures !== false,
       caseStackNum: cp && cp.showFeatures === false ? '08' : '09',
-      caseFeatures:
-        cp && cp.features && cp.features.length
-          ? cp.features
-          : ['Feature description [PH]', 'Feature description [PH]', 'Feature description [PH]'],
+      caseFeatures: (cp && cp.features && cp.features.length
+        ? cp.features
+        : ['Feature description [PH]', 'Feature description [PH]', 'Feature description [PH]']
+      ).map((text, i) => ({ text, image: (cp && cp.featureImages && cp.featureImages[i]) || '' })),
       caseStack: cp && cp.stack && cp.stack.length ? cp.stack : ['Add technologies [PH]'],
       caseLinks: cp
         ? [cp.liveUrl && { label: 'Live site', url: cp.liveUrl }, cp.githubUrl && { label: 'GitHub', url: cp.githubUrl }].filter(Boolean)
