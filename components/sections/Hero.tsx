@@ -331,8 +331,7 @@ export function Hero({ v }: { v: ViewModel }) {
                 `margin:0;max-width:44ch;font-family:var(--wide);font-stretch:100%;font-size:clamp(14px,1.3vw,18px);line-height:1.55;color:var(--ink3);animation:rise 800ms 560ms cubic-bezier(.22,1,.36,1) both;animation-play-state:${v.heroPlay ?? ''}`,
               )}
             >
-              {'Full stack developer and UI/UX designer, based in the Philippines. Open to work. '}
-              <span style={{ color: 'var(--muted)' }}>{'[PH]'}</span>
+              {'Full stack developer and UI/UX designer, based in the Philippines. Open to work.'}
             </p>
           </div>
         </div>
