@@ -86,7 +86,7 @@ export const fallbackContent: PortfolioContent = {
       showFeatures: false,
       overview:
         'Implements lexical analysis, syntax parsing, and semantic execution for the LOLCode programming language, with documentation of its formal grammar and lexeme patterns.',
-      thumbnailUrl: '/images/projects/lolcode.webp',
+      thumbnailUrl: '/images/projects/lolcode-demo.webp',
     },
     {
       slug: 'tidy-teens',
@@ -119,7 +119,7 @@ export const fallbackContent: PortfolioContent = {
       overview:
         'A Python and SQL CRUD system for food establishments, menu items, users, and reviews, including automated rating updates, reports, and database error handling.',
       githubUrl: 'https://github.com/rrisaac/FoodReviewDBSystem',
-      thumbnailUrl: '/images/projects/food-info.webp',
+      thumbnailUrl: '/images/projects/food-info-demo.webp',
     },
   ],
   experience: [
