@@ -79,19 +79,6 @@ export const fallbackContent: PortfolioContent = {
       stack: ['Python'],
     },
     {
-      slug: 'slambook',
-      name: 'SlamBook',
-      tag: 'Mobile app',
-      role: 'Mobile Developer',
-      year: '2024',
-      org: 'CMSC 23: Mobile Development',
-      tags: ['Mobile app', 'Mobile Developer'],
-      ar: '16 / 10',
-      description:
-        'Built a Firebase-powered mobile application with user profiles, a digital slam book, Google Sign-In, QR-based friend verification, authentication, storage, and custom UI/UX.',
-      stack: ['Firebase', 'Google Sign-In'],
-    },
-    {
       slug: 'tidy-teens',
       name: 'Tidy Teens',
       tag: '2D game',
