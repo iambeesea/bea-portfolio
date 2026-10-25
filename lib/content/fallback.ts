@@ -38,21 +38,6 @@ export const fallbackContent: PortfolioContent = {
       stack: [],
     },
     {
-      slug: 'yses-explorer',
-      thumbnailUrl: '/images/projects/yses-explorer.webp',
-      liveUrl: 'https://jpad-project.vercel.app/',
-      name: 'YSES Explorer',
-      tag: 'Mentorship platform',
-      role: 'Frontend Developer',
-      year: '2024',
-      org: 'Young Software Engineers’ Society, UPLB',
-      tags: ['Mentorship platform', 'Frontend Developer'],
-      ar: '3 / 2',
-      description:
-        'Developed a responsive platform connecting YSES members and alumni for career exploration and mentorship with a modular component architecture.',
-      stack: ['React', 'Vite', 'Tailwind CSS'],
-    },
-    {
       slug: 'farm-to-table',
       thumbnailUrl: '/images/projects/farm-to-table.webp',
       features: [
