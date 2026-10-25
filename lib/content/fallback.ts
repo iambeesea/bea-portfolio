@@ -106,6 +106,8 @@ export const fallbackContent: PortfolioContent = {
     },
     {
       slug: 'food-info',
+      thumbnailUrl: '/images/projects/food-info.webp',
+      githubUrl: 'https://github.com/rrisaac/FoodReviewDBSystem',
       name: 'Food Information System',
       tag: 'Database system',
       role: 'Developer',
