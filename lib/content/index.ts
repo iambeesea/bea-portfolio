@@ -62,8 +62,10 @@ export async function getPortfolioContent(): Promise<PortfolioContent> {
       supabase.from('experiences').select('*').eq('published', true).order('sort_order').order('created_at'),
     ]);
 
-    if (projects.error) console.error('[content] projects query failed:', projects.error.message);
-    if (experiences.error) console.error('[content] experiences query failed:', experiences.error.message);
+    // Falling back is expected behaviour (e.g. while a free-tier project is
+    // paused), so this is a warning, not an error.
+    const failed = projects.error ?? experiences.error;
+    if (failed) console.warn(`[content] Supabase unavailable (${failed.message}); showing built-in content where needed.`);
 
     const projectList = (projects.data ?? []).map(toProject);
     const experienceList = (experiences.data ?? []).map(toExperience);
@@ -79,7 +81,7 @@ export async function getPortfolioContent(): Promise<PortfolioContent> {
       education: ofKind('education', fallbackContent.education),
     };
   } catch (error) {
-    console.error('[content] Supabase unreachable, using built-in content:', error);
+    console.warn('[content] Supabase unreachable; showing built-in content.', error);
     return fallbackContent;
   }
 }

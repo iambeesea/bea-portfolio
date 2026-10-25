@@ -77,6 +77,10 @@ Schema, security rules and seed data live in `supabase/`.
 
 Set a project's `thumbnail_url` to a file in the `portfolio` bucket to give its card a cover image.
 
+### Keeping the free project awake
+
+Supabase pauses free-tier projects after about a week without activity, and the contact form fails while paused. `vercel.json` schedules a daily request to `/api/keep-alive`, which makes one small read. If the project is ever paused anyway, restore it from the Supabase dashboard.
+
 ### Setup
 
 1. Create a Supabase project.
@@ -96,6 +100,7 @@ Contact messages arrive in the `contact_messages` table. If `RESEND_API_KEY` is 
 | `RESEND_API_KEY` | For email notifications | Secret, server only; emails you each new contact message |
 | `CONTACT_NOTIFY_EMAIL` | No | Where notifications go; defaults to the email in `lib/site.ts` |
 | `CONTACT_FROM_EMAIL` | No | Sender address, once a domain is verified in Resend |
+| `CRON_SECRET` | In production | Secret; authorises the daily keep-alive ping (Vercel Cron) |
 | `CONTACT_IP_SALT` | No | Random string that salts the hashed sender address used for rate limiting |
 
 Never commit real keys. `.env*` files are ignored by git, except `.env.example`.

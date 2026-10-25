@@ -1,6 +1,7 @@
 import 'server-only';
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { Database } from '@/types/database';
+import { fetchWithTimeout } from './fetch';
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -12,5 +13,11 @@ const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
  */
 export function createPublicClient(): SupabaseClient<Database> | null {
   if (!url || !anonKey) return null;
-  return createClient<Database>(url, anonKey, { auth: { persistSession: false, autoRefreshToken: false } });
+  return createClient<Database>(url, anonKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+    global: { fetch: fetchWithTimeout(4000) },
+    // The client retries failed reads up to 3 times with backoff (about 7 s in
+    // all). Fail fast instead: callers already fall back or show an error.
+    db: { retry: false },
+  });
 }
