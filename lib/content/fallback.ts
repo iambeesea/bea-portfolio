@@ -11,6 +11,7 @@ export const fallbackContent: PortfolioContent = {
   projects: [
     {
       slug: 'sinag',
+      liveUrl: 'https://sinag-b7082.web.app/',
       name: 'SINAG',
       tag: 'Youth governance platform',
       role: 'Full-Stack Developer',
