@@ -3411,7 +3411,7 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
         ? [
             cp.role && { k: 'Role', v: cp.role },
             { k: 'Type', v: cp.type || cp.tag },
-            { k: 'Stack', v: cp.stack && cp.stack.length ? cp.stack.join(' · ') : '[PH]' },
+            cp.stack && cp.stack.length && { k: /design/i.test(cp.tag) ? 'Tools' : 'Stack', v: cp.stack.join(' · ') },
             cp.year && { k: 'Year', v: cp.year },
           ].filter(Boolean)
         : [],
@@ -3427,7 +3427,10 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
       caseFeaturesNum: '03',
       caseStackNum: cp && cp.showFeatures !== false && cp.features && cp.features.length ? '04' : '03',
       caseFeatures: cp && cp.features ? cp.features.map((text, i) => ({ text, image: (cp.featureImages && cp.featureImages[i]) || '' })) : [],
-      caseStack: cp && cp.stack && cp.stack.length ? cp.stack : ['Add technologies [PH]'],
+      caseStack: (cp && cp.stack) || [],
+      caseHasStack: !!(cp && cp.stack && cp.stack.length),
+      // Design projects list tools rather than a tech stack.
+      caseStackLabel: cp && /design/i.test(cp.tag) ? 'Tools' : 'Tech stack',
       caseLinks: cp
         ? [cp.liveUrl && { label: 'Live site', url: cp.liveUrl }, cp.githubUrl && { label: 'GitHub', url: cp.githubUrl }].filter(Boolean)
         : [],

@@ -243,38 +243,40 @@ export function CaseStudy({ v }: { v: ViewModel }) {
               </div>
             </div>
           ) : null}
-          <div data-crev={'1'} style={{ padding: 'clamp(26px,4vh,40px) 0', borderTop: '1px solid var(--line)' }}>
-            <div
-              style={{
-                display: 'flex',
-                gap: '12px',
-                fontSize: '12px',
-                letterSpacing: '.08em',
-                textTransform: 'uppercase',
-                color: 'var(--accent)',
-              }}
-            >
-              <span>{txt(v.caseStackNum)}</span>
-              <span style={{ color: 'var(--ink2)' }}>{'Tech stack'}</span>
+          {v.caseHasStack ? (
+            <div data-crev={'1'} style={{ padding: 'clamp(26px,4vh,40px) 0', borderTop: '1px solid var(--line)' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  gap: '12px',
+                  fontSize: '12px',
+                  letterSpacing: '.08em',
+                  textTransform: 'uppercase',
+                  color: 'var(--accent)',
+                }}
+              >
+                <span>{txt(v.caseStackNum)}</span>
+                <span style={{ color: 'var(--ink2)' }}>{txt(v.caseStackLabel)}</span>
+              </div>
+              <div style={{ marginTop: '18px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {list(v.caseStack).map((t, i0) => (
+                  <Fragment key={i0}>
+                    <span
+                      style={{
+                        padding: '7px 14px',
+                        borderRadius: '999px',
+                        border: '1px solid rgba(var(--ink-rgb),.26)',
+                        fontSize: '13px',
+                        color: 'var(--ink2)',
+                      }}
+                    >
+                      {txt(t)}
+                    </span>
+                  </Fragment>
+                ))}
+              </div>
             </div>
-            <div style={{ marginTop: '18px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              {list(v.caseStack).map((t, i0) => (
-                <Fragment key={i0}>
-                  <span
-                    style={{
-                      padding: '7px 14px',
-                      borderRadius: '999px',
-                      border: '1px solid rgba(var(--ink-rgb),.26)',
-                      fontSize: '13px',
-                      color: 'var(--ink2)',
-                    }}
-                  >
-                    {txt(t)}
-                  </span>
-                </Fragment>
-              ))}
-            </div>
-          </div>
+          ) : null}
           {v.caseHasLinks ? (
             <>
               <div
