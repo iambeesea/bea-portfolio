@@ -57,7 +57,7 @@ export const services: Service[] = [
       'Event highlights and behind-the-scenes edits',
       'On-brand captions and text overlays',
     ],
-    tools: [],
+    tools: ['CapCut'],
   },
 ];
 
