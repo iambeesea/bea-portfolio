@@ -37,6 +37,33 @@ export const fallbackContent: PortfolioContent = {
       thumbnailUrl: '/images/projects/sinag.webp',
     },
     {
+      slug: 'courtmate',
+      name: 'CourtMate',
+      tag: 'Sports platform',
+      role: 'Full-Stack Developer',
+      year: '2026 – Present',
+      org: '',
+      tags: ['Sports platform', 'Full-Stack Developer'],
+      ar: '16 / 10',
+      description:
+        'A mobile-first sports platform for the Philippines: find open plays, book courts, run live queues, and track your record.',
+      stack: ['React 19', 'TypeScript', 'Vite', 'React Router', 'Leaflet', 'FastAPI', 'SQLAlchemy', 'Alembic', 'PostgreSQL', 'Render'],
+      features: [
+        'Discover and book: 30 sports with their own formats and rules, live court availability with no double-booking, and venues by region, barangay or near you.',
+        'Play and track: open plays with waitlists, live queues with rotation or winner-stays, and player records computed from real results.',
+        'Community and venues: clubs, barkadas and teams, plus a venue dashboard for occupancy and one-tap booking requests.',
+      ],
+      featureImages: [
+        '/images/projects/courtmate-discover.webp',
+        '/images/projects/courtmate-play.webp',
+        '/images/projects/courtmate-community.webp',
+      ],
+      overview:
+        'A mobile-first sports platform for the Philippines where players discover open plays, reserve courts and other venues, join sessions and live queues, play with their communities, and keep a record for every sport they play. It covers 30 sports, each with its own formats and rules, prevents double bookings at the database level, and gives venue operators a dashboard for spaces, hours, prices and booking requests. Player records are computed from recorded results and can be shared as Instagram Story cards.',
+      roleDetail: 'Designing and building the platform as its full-stack developer.',
+      thumbnailUrl: '/images/projects/courtmate.webp',
+    },
+    {
       slug: 'ics-alumni',
       name: 'IsKonek',
       tag: 'Alumni relations system',
