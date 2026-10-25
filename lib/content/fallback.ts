@@ -4,7 +4,7 @@ import type { PortfolioContent } from '@/types/content';
  * Built-in portfolio content. It is what the site shows when Supabase is not
  * configured or cannot be reached, and it is the source for supabase/seed.sql.
  *
- * The current employer is intentionally shown only as "Private Company" —
+ * The current employer is intentionally described only as "Marketing & Growth Agency" —
  * never add its name, products, clients or URLs here.
  */
 export const fallbackContent: PortfolioContent = {
@@ -295,7 +295,7 @@ export const fallbackContent: PortfolioContent = {
     {
       kind: 'work',
       role: 'Software Development Lead',
-      company: 'Private Company',
+      company: 'Marketing & Growth Agency',
       dates: '2026',
       place: 'Remote',
       summary:

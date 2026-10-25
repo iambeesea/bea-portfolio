@@ -832,7 +832,7 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
 
   // Leadership roles
 
-  // Experience + Education. The current employer is intentionally shown only as "Private Company" — never add its name, products, clients or URLs here.
+  // Experience + Education. The current employer is intentionally described only as "Marketing & Growth Agency" — never add its name, products, clients or URLs here.
   // Card media (optional, max 3): media: [{ src: '/images/work/file.jpg', alt: 'What the image shows', caption: '', safeForPortfolio: true }]
   // Anything without safeForPortfolio: true is never displayed. tags: ['React', 'APIs'] is optional too.
 
