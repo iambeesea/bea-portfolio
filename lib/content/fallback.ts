@@ -158,7 +158,7 @@ export const fallbackContent: PortfolioContent = {
       tags: ['Menu design', 'Digital Designer'],
       ar: '16 / 10',
       description: 'A two-page drinks and food menu for Trey Coffee Roasters in Malolos.',
-      stack: [],
+      stack: ['Figma'],
       features: [
         'Drinks menu: signature coffees, flavored lattes, non-coffee, extras, ice blended and slow bar.',
         'Food menu: mains, risotto, sandwiches, pasta, sides and pastries.',
