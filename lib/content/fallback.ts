@@ -26,7 +26,7 @@ export const fallbackContent: PortfolioContent = {
       slug: 'ics-alumni',
       thumbnailUrl: '/images/projects/iskonek.webp',
       liveUrl: 'https://iskonek.vercel.app/',
-      name: 'ICS Alumni Tracker',
+      name: 'IsKonek',
       tag: 'Alumni relations system',
       role: 'Full-Stack Developer',
       year: '2024',
