@@ -63,6 +63,7 @@ export const fallbackContent: PortfolioContent = {
     },
     {
       slug: 'lolcode',
+      thumbnailUrl: '/images/projects/lolcode.webp',
       name: 'LOLCode Interpreter',
       tag: 'Language interpreter',
       role: 'Developer',
