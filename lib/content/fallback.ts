@@ -39,6 +39,8 @@ export const fallbackContent: PortfolioContent = {
     },
     {
       slug: 'yses-explorer',
+      thumbnailUrl: '/images/projects/yses-explorer.webp',
+      liveUrl: 'https://jpad-project.vercel.app/',
       name: 'YSES Explorer',
       tag: 'Mentorship platform',
       role: 'Frontend Developer',
