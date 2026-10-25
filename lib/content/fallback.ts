@@ -328,7 +328,7 @@ export const fallbackContent: PortfolioContent = {
       kind: 'work',
       role: 'Software Engineer Intern',
       company: 'Limitless Lab',
-      dates: 'Jun – Jul 2025',
+      dates: '2023',
       place: 'Internship',
       summary:
         'Gained hands-on experience in a professional software-development environment while completing my Computer Science degree. I applied concepts learned in university to real development workflows, collaborated on technical tasks, and gained a better understanding of how digital products move from requirements and implementation to testing and delivery.',
