@@ -189,42 +189,46 @@ export function CaseStudy({ v }: { v: ViewModel }) {
               </div>
             </Fragment>
           ))}
-          <div data-crev={'1'} style={{ padding: 'clamp(26px,4vh,40px) 0', borderTop: '1px solid var(--line)' }}>
-            <div
-              style={{
-                display: 'flex',
-                gap: '12px',
-                fontSize: '12px',
-                letterSpacing: '.08em',
-                textTransform: 'uppercase',
-                color: 'var(--accent)',
-              }}
-            >
-              <span>{'08'}</span>
-              <span style={{ color: 'var(--ink2)' }}>{'Key features'}</span>
-            </div>
-            <div style={{ marginTop: '20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '14px' }}>
-              {list(v.caseFeatures).map((f, i0) => (
-                <Fragment key={i0}>
-                  <div style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid var(--line)', background: 'var(--panel)' }}>
-                    <div
-                      style={{
-                        aspectRatio: '4/3',
-                        background: 'repeating-linear-gradient(135deg,var(--well) 0 12px,var(--well2) 12px 24px)',
-                        display: 'grid',
-                        placeItems: 'center',
-                        fontSize: '12px',
-                        color: 'var(--muted)',
-                      }}
-                    >
-                      {'Screenshot [PH]'}
+          {v.caseShowFeatures ? (
+            <div data-crev={'1'} style={{ padding: 'clamp(26px,4vh,40px) 0', borderTop: '1px solid var(--line)' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  gap: '12px',
+                  fontSize: '12px',
+                  letterSpacing: '.08em',
+                  textTransform: 'uppercase',
+                  color: 'var(--accent)',
+                }}
+              >
+                <span>{'08'}</span>
+                <span style={{ color: 'var(--ink2)' }}>{'Key features'}</span>
+              </div>
+              <div style={{ marginTop: '20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '14px' }}>
+                {list(v.caseFeatures).map((f, i0) => (
+                  <Fragment key={i0}>
+                    <div style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid var(--line)', background: 'var(--panel)' }}>
+                      <div
+                        style={{
+                          aspectRatio: '4/3',
+                          background: 'repeating-linear-gradient(135deg,var(--well) 0 12px,var(--well2) 12px 24px)',
+                          display: 'grid',
+                          placeItems: 'center',
+                          fontSize: '12px',
+                          color: 'var(--muted)',
+                        }}
+                      >
+                        {'Screenshot [PH]'}
+                      </div>
+                      <p style={{ margin: '0', padding: '14px 16px', fontSize: '14px', lineHeight: '1.6', color: 'var(--body)' }}>
+                        {txt(f)}
+                      </p>
                     </div>
-                    <p style={{ margin: '0', padding: '14px 16px', fontSize: '14px', lineHeight: '1.6', color: 'var(--body)' }}>{txt(f)}</p>
-                  </div>
-                </Fragment>
-              ))}
+                  </Fragment>
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null}
           <div data-crev={'1'} style={{ padding: 'clamp(26px,4vh,40px) 0', borderTop: '1px solid var(--line)' }}>
             <div
               style={{
@@ -236,7 +240,7 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                 color: 'var(--accent)',
               }}
             >
-              <span>{'09'}</span>
+              <span>{txt(v.caseStackNum)}</span>
               <span style={{ color: 'var(--ink2)' }}>{'Tech stack'}</span>
             </div>
             <div style={{ marginTop: '18px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>

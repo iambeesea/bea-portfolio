@@ -14,6 +14,8 @@ export interface Project {
   description: string;
   stack: string[];
   features?: string[];
+  /** Set to false to leave the "Key features" section out of the case study. */
+  showFeatures?: boolean;
   overview?: string;
   problem?: string;
   roleDetail?: string;

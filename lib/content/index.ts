@@ -19,6 +19,7 @@ function toProject(row: ProjectRow): Project {
     description: row.short_description,
     stack: row.stack,
     features: row.features.length ? row.features : undefined,
+    showFeatures: row.show_features,
     overview: optional(row.overview),
     problem: optional(row.problem),
     roleDetail: optional(row.role_detail),

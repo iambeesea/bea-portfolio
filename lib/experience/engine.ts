@@ -3430,6 +3430,8 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
             { num: '07', label: 'Outcome', body: cp.outcome || 'Real outcomes only — shipped, users, results. [PH]' },
           ]
         : [],
+      caseShowFeatures: !!cp && cp.showFeatures !== false,
+      caseStackNum: cp && cp.showFeatures === false ? '08' : '09',
       caseFeatures:
         cp && cp.features && cp.features.length
           ? cp.features

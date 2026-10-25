@@ -25,6 +25,7 @@ export type ProjectRow = {
   github_url: string | null;
   thumbnail_url: string | null;
   aspect_ratio: string;
+  show_features: boolean;
   featured: boolean;
   status: 'draft' | 'published';
   sort_order: number;
@@ -82,6 +83,7 @@ export type Database = {
           | 'stack'
           | 'tags'
           | 'aspect_ratio'
+          | 'show_features'
           | 'role'
           | 'year'
           | 'organization'
