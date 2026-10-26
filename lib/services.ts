@@ -35,7 +35,7 @@ export const services: Service[] = [
       'Replying to comments and messages in your brand’s voice',
       'Monthly reports on reach and engagement, with what to try next',
     ],
-    tools: ['Canva', 'Adobe Photoshop', 'Figma', 'CapCut'],
+    tools: ['Canva', 'Adobe Photoshop', 'Figma', 'CapCut', 'ClickUp'],
     projects: ['rion-events', 'kata-consulting'],
   },
   {

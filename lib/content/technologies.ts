@@ -184,4 +184,10 @@ export const technologies: Technology[] = [
     icon: 'github',
     brandColor: 'var(--ink)',
   },
+  {
+    name: 'ClickUp',
+    category: 'Deployment and Tools',
+    description: 'Project management',
+    brandColor: '#B57CF0',
+  },
 ];
