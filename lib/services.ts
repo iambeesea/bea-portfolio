@@ -45,8 +45,9 @@ export const services: Service[] = [
       'Form → database → inbox workflows',
       'Booking confirmations, notifications and calendar reminders',
       'Scheduled jobs and connections between the tools you already use',
+      'GoHighLevel (GHL): funnels and websites, CRM pipelines, and automated workflows for follow-ups and bookings',
     ],
-    tools: ['Node.js', 'Supabase', 'Resend', 'Google Calendar API', 'Vercel Cron', 'GitHub Actions'],
+    tools: ['GoHighLevel', 'Node.js', 'Supabase', 'Resend', 'Google Calendar API', 'Vercel Cron', 'GitHub Actions'],
   },
   {
     id: 'reels',
