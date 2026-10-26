@@ -191,4 +191,11 @@ export const technologies: Technology[] = [
     icon: 'clickup',
     brandColor: '#B57CF0',
   },
+  {
+    name: 'Meta Business Suite',
+    category: 'Deployment and Tools',
+    description: 'Social scheduling',
+    icon: 'meta',
+    brandColor: '#6FA8FF',
+  },
 ];

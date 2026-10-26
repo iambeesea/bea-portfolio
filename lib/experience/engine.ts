@@ -1279,6 +1279,7 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
       { name: 'Cloudflare', row: 0, rx: 0.879999999999999, fx: 79.4, fy: 64.2, mfx: 73, mfy: 70.4, arc: 0.03 },
       { name: 'GitHub', row: 1, rx: 0.25, fx: 86.6, fy: 69.8, mfx: 73, mfy: 74.6, arc: -0.045 },
       { name: 'ClickUp', row: 0, rx: 0.62, fx: 79.4, fy: 75.4, mfx: 73, mfy: 78.8, arc: 0.06 },
+      { name: 'Meta Business Suite', row: 1, rx: 0.95, fx: 86.6, fy: 81, mfx: 73, mfy: 83, arc: -0.03 },
     ],
     links: [
       [0, 1],
@@ -1306,13 +1307,14 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
       [0, 21],
       [11, 5],
       [25, 26],
+      [26, 27],
     ],
     rowsY: [0.34, 0.58], // marquee rows (fraction of height)
     marqueeSpeed: 70, // px/s, row 1 left, row 2 right
     rowsFrom: 0.3, // local scroll units
     convergeFrom: 0.52,
     convergeLen: 0.42,
-    stagger: 0.006, // 27 nodes: last one lands by ~1.1
+    stagger: 0.006, // 28 nodes: last one lands by ~1.1
     linesFrom: 1.0,
     linesLen: 0.2,
     lineOpacity: 0.3,

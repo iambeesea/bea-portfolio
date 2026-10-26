@@ -567,6 +567,15 @@ export function TechConstellation({ v }: { v: ViewModel }) {
                 y2={'0'}
                 style={{ strokeDasharray: '1', strokeDashoffset: '1', opacity: '0' }}
               />
+              <line
+                data-wline={'1'}
+                pathLength={'1'}
+                x1={'0'}
+                y1={'0'}
+                x2={'0'}
+                y2={'0'}
+                style={{ strokeDasharray: '1', strokeDashoffset: '1', opacity: '0' }}
+              />
             </g>
           </svg>
           <span
