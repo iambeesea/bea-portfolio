@@ -11,7 +11,7 @@ export const revalidate = 300;
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Brand and social design, websites and web apps, automation, and reels by Beatrice Capule, a front-end developer and digital designer in the Philippines.',
+    'Brand and social design, social media management, websites and web apps, automation, and reels by Beatrice Capule, a front-end developer and digital designer in the Philippines.',
   alternates: { canonical: '/services' },
 };
 
@@ -50,8 +50,8 @@ export default async function ServicesPage() {
               <span className="font-serif font-normal tracking-normal text-accent italic">work for you.</span>
             </h1>
             <p className="m-0 mt-6 max-w-[56ch] text-[clamp(16px,1.5vw,19px)] leading-relaxed text-body">
-              One person for your brand visuals, your website, the automations behind it, and the reels that promote it, so nothing gets
-              lost between handoffs.
+              One person for your brand visuals, your social media, your website, the automations behind it, and the reels that promote it,
+              so nothing gets lost between handoffs.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={mail} className={`${button} bg-ink text-bg hover:bg-accent hover:text-bg`}>

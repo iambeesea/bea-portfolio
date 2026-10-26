@@ -102,6 +102,10 @@ export function About({ v }: { v: ViewModel }) {
                 {'·'}
               </span>
               <span>{'DIGITAL DESIGNER'}</span>
+              <span aria-hidden={'true'} style={{ color: 'var(--line2)' }}>
+                {'·'}
+              </span>
+              <span>{'SOCIAL MEDIA MANAGER'}</span>
               <span
                 data-aglow={'1'}
                 aria-hidden={'true'}
@@ -135,6 +139,10 @@ export function About({ v }: { v: ViewModel }) {
                   {'·'}
                 </span>
                 <span>{'DIGITAL DESIGNER'}</span>
+                <span aria-hidden={'true'} style={{ color: 'var(--line2)' }}>
+                  {'·'}
+                </span>
+                <span>{'SOCIAL MEDIA MANAGER'}</span>
               </span>
             </p>
             <p

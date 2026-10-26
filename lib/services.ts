@@ -26,6 +26,19 @@ export const services: Service[] = [
     projects: ['kata-consulting', 'rion-events', 'trey-coffee-menu'],
   },
   {
+    id: 'social',
+    title: 'Social media management',
+    pitch: 'Your accounts, planned, posted and looked after, so you stay visible without the daily effort.',
+    includes: [
+      'Content plans and monthly calendars built around your goals',
+      'Designing, writing captions for and scheduling posts, stories and reels',
+      'Replying to comments and messages in your brand’s voice',
+      'Monthly reports on reach and engagement, with what to try next',
+    ],
+    tools: ['Canva', 'Adobe Photoshop', 'Figma', 'CapCut'],
+    projects: ['rion-events', 'kata-consulting'],
+  },
+  {
     id: 'websites',
     title: 'Websites & web apps',
     pitch: 'Fast, responsive sites and apps, designed in Figma and built in code.',
