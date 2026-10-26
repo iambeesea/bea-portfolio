@@ -188,6 +188,7 @@ export const technologies: Technology[] = [
     name: 'ClickUp',
     category: 'Deployment and Tools',
     description: 'Project management',
+    icon: 'clickup',
     brandColor: '#B57CF0',
   },
 ];
