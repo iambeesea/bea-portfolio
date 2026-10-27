@@ -294,6 +294,36 @@ export const fallbackContent: PortfolioContent = {
       thumbnailUrl: '/images/projects/detailing.webp',
     },
     {
+      slug: 'community-website',
+      name: 'Community Website',
+      tag: 'Web design',
+      role: 'Web Designer',
+      year: '2026',
+      org: '',
+      tags: ['Web design', 'Web Designer'],
+      ar: '16 / 10',
+      description:
+        'A website for a local business community: what the community is, what a gathering looks like, membership, a nearby-business directory and a short join form.',
+      stack: [],
+      features: [
+        'A welcoming hero: a large serif headline, a short explanation of who the community is for, and a clear join button.',
+        'What a gathering looks like and what membership includes: three simple steps for the monthly gathering, followed by cards that spell out what members get.',
+        'Find businesses near you: a service-area map with a 30-mile radius and nearby cities, next to a short explanation and a call to action for getting listed.',
+        'A short join form: name, email, optional phone and city, what the person is interested in, and a note, kept to the essentials.',
+      ],
+      showFeatures: true,
+      featureImages: [
+        '/images/projects/community-site-hero.webp',
+        '/images/projects/community-site-gathering.webp',
+        '/images/projects/community-site-directory.webp',
+        '/images/projects/community-site-join.webp',
+      ],
+      overview:
+        'A website I designed for a client’s membership community of local business owners, contractors, consultants and creators. The site explains who the community is for, shows what a monthly gathering looks like, presents the membership and a nearby-business directory, and ends with a short join form. I aimed for a calm, welcoming feel with a deep green and cream palette, large serif headlines and generous spacing.',
+      roleDetail: 'Designed the website, from the layout and visual style to the page sections and the join flow.',
+      thumbnailUrl: '/images/projects/community-site.webp',
+    },
+    {
       slug: 'trey-coffee-menu',
       name: 'Trey Coffee Roasters',
       tag: 'Menu design',
