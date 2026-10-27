@@ -30,12 +30,43 @@ export const fallbackContent: PortfolioContent = {
         'Firebase Hosting',
         'Render',
       ],
+      showFeatures: true,
       overview:
         'A MERN-based platform for SK Bulihan covering youth services, event registration, reservations, assistance requests, public disclosures, concerns, and administrative workflows. Evaluated by 21 users with a System Usability Scale score of 84.53 (Grade A).',
       roleDetail: 'Designed and built the platform as its full-stack developer.',
       outcome: 'Evaluated by 21 users with a System Usability Scale score of 84.53 (Grade A).',
       liveUrl: 'https://sinag-b7082.web.app/',
       thumbnailUrl: '/images/projects/sinag.webp',
+    },
+    {
+      slug: 'field-sales-app',
+      name: 'Field Sales App',
+      tag: 'Mobile app',
+      role: 'Mobile App Developer',
+      year: '2026',
+      org: '',
+      tags: ['Mobile app', 'Mobile App Developer'],
+      ar: '16 / 10',
+      description:
+        'A mobile app for a field sales team: capture leads from the map, guide every door visit, draw territories, and track the pipeline and team standings.',
+      stack: ['Expo', 'React Native'],
+      features: [
+        'Overview and standings: a live dashboard of doors knocked, conversations, contact rate, open pipeline and deals won, plus a team leaderboard by day, week or month with monthly honours.',
+        'Leads from the map: tap a property to see its address and street photo and save it as a lead, then keep notes, photos, lists and activity on every lead.',
+        'Guided visits: a step-by-step flow records what happened at each door (no answer, interested, follow up, appointment, quote, sold, not interested or do not contact) and sets the follow-up, with a clear “saved and uploaded” confirmation.',
+        'Territories and pipeline: managers draw territories on the map and see how many leads fall inside, and the pipeline shows every stage from New to Won with counts and values.',
+      ],
+      showFeatures: true,
+      featureImages: [
+        '/images/projects/field-sales-overview.webp',
+        '/images/projects/field-sales-leads.webp',
+        '/images/projects/field-sales-visits.webp',
+        '/images/projects/field-sales-territories.webp',
+      ],
+      overview:
+        'A mobile app I built with Expo for a client’s door-to-door sales team. It gives the team one place to run the day: reps tap a property on the map to turn it into a lead, record every visit through a guided outcome flow, and see their own numbers and standings, while managers draw territories, follow the pipeline and review the team’s results.',
+      roleDetail: 'Built the mobile app with Expo and React Native for the client.',
+      thumbnailUrl: '/images/projects/field-sales.webp',
     },
     {
       slug: 'courtmate',
@@ -54,6 +85,7 @@ export const fallbackContent: PortfolioContent = {
         'Play and track: open plays with waitlists, live queues with rotation or winner-stays, and player records computed from real results.',
         'Community and venues: clubs, barkadas and teams, plus a venue dashboard for occupancy and one-tap booking requests.',
       ],
+      showFeatures: true,
       featureImages: [
         '/images/projects/courtmate-discover.webp',
         '/images/projects/courtmate-play.webp',
@@ -96,6 +128,7 @@ export const fallbackContent: PortfolioContent = {
         'Inventory for learning materials and management reports on retention, inquiries and growth.',
         'Designed for phones too: dashboard, attendance and student records on mobile.',
       ],
+      showFeatures: true,
       featureImages: [
         '/images/projects/kumon-cms-dashboard.webp',
         '/images/projects/kumon-cms-students.webp',
@@ -122,6 +155,7 @@ export const fallbackContent: PortfolioContent = {
       ar: '4 / 3',
       description: 'An alumni tracker and relations management system for the Institute of Computer Science, UPLB.',
       stack: ['React', 'Supabase'],
+      showFeatures: true,
       overview:
         'A React and Supabase platform with alumni profiles, search, job postings, RSVP events, donations, newsletters, engagement reporting, and role-based access for alumni and administrators.',
       liveUrl: 'https://iskonek.vercel.app/',
@@ -142,6 +176,7 @@ export const fallbackContent: PortfolioContent = {
         "Sales reports for administrators, filterable by period, listing each product's price, quantity sold and income, with the total.",
         'Customer sign-up and authentication, with separate customer and administrator access.',
       ],
+      showFeatures: true,
       featureImages: ['/images/projects/farm-to-table-sales.webp', '/images/projects/farm-to-table-signup.webp'],
       overview:
         'A React, Node.js/Express, and MongoDB marketplace with authentication, protected routes, inventory tracking, order confirmation, and sales reporting for customer and administrator roles.',
@@ -175,6 +210,7 @@ export const fallbackContent: PortfolioContent = {
       description: 'A Bomberman-inspired 2D desktop game.',
       stack: ['Java', 'JavaFX'],
       features: ['Top-down room levels with a live score and three bomb lives.'],
+      showFeatures: true,
       featureImages: ['/images/projects/tidy-teens-walk.webp'],
       overview:
         'A Bomberman-inspired 2D desktop game built in Java/JavaFX using object-oriented programming, sprite inheritance, collision detection, scoring, scene management, and AnimationTimer game loops.',
@@ -191,6 +227,7 @@ export const fallbackContent: PortfolioContent = {
       ar: '3 / 2',
       description: 'A CRUD system for food establishments, menu items, users, and reviews.',
       stack: ['Python', 'SQL', 'MySQL', 'CustomTkinter'],
+      showFeatures: true,
       overview:
         'A Python and SQL CRUD system for food establishments, menu items, users, and reviews, including automated rating updates, reports, and database error handling.',
       githubUrl: 'https://github.com/rrisaac/FoodReviewDBSystem',
@@ -213,6 +250,7 @@ export const fallbackContent: PortfolioContent = {
         'A photo gallery of the lounge, the bar and Buckboard Trail, with each photo viewable in full.',
         'A visit section with the address, opening hours, phone number and a map.',
       ],
+      showFeatures: true,
       featureImages: [
         '/images/projects/oasis-experience.webp',
         '/images/projects/oasis-flavors.webp',
@@ -240,6 +278,7 @@ export const fallbackContent: PortfolioContent = {
         'Drinks menu: signature coffees, flavored lattes, non-coffee, extras, ice blended and slow bar.',
         'Food menu: mains, risotto, sandwiches, pasta, sides and pastries.',
       ],
+      showFeatures: true,
       featureImages: ['/images/projects/trey-drinks.webp', '/images/projects/trey-food.webp'],
       overview:
         'Menu design for Trey Coffee Roasters, a coffee roaster in Malolos: a drinks menu and a food menu in the café’s green-and-cream brand, organised into numbered sections with clear prices so guests can scan them quickly.',
@@ -262,6 +301,7 @@ export const fallbackContent: PortfolioContent = {
         'Package carousels comparing Classic and Signature celebrations for the same guest count.',
         'Campaign carousels for seasonal events and full-service coordination.',
       ],
+      showFeatures: true,
       featureImages: ['/images/projects/rion-booking.webp', '/images/projects/rion-packages.webp', '/images/projects/rion-campaigns.webp'],
       overview:
         'Social media designs for RION Events, which styles and caters celebrations and corporate events: Instagram carousels that explain how booking works, compare packages and promote seasonal events, in a warm editorial style built around the team’s own event photos.',
@@ -284,6 +324,7 @@ export const fallbackContent: PortfolioContent = {
         'Instagram Stories for audience engagement, like the KATA Check-in question box.',
         'Single-post statics, each built around one clear message.',
       ],
+      showFeatures: true,
       featureImages: ['/images/projects/kata-carousel.webp', '/images/projects/kata-stories.webp', '/images/projects/kata-statics.webp'],
       overview:
         'Social media designs for KATA Systems Consulting Inc., an IT and business systems consultancy: educational carousels, Instagram Stories and single-post statics that explain systems thinking, ERP and requirements in plain language, in KATA’s purple-and-green brand.',
