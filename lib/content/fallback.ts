@@ -264,6 +264,36 @@ export const fallbackContent: PortfolioContent = {
       thumbnailUrl: '/images/projects/oasis.webp',
     },
     {
+      slug: 'mobile-detailing-website',
+      name: 'Mobile Detailing Website',
+      tag: 'Web design',
+      role: 'Web Designer',
+      year: '2026',
+      org: '',
+      tags: ['Web design', 'Web Designer'],
+      ar: '16 / 10',
+      description:
+        'A one-page website for a mobile car detailing business: click-to-text booking, clear service packages, a ceramic coating section and a results gallery.',
+      stack: ['Figma'],
+      features: [
+        'Hero built to get a text or call: a bold headline, click-to-text and click-to-call buttons, and the service area and self-contained water and power selling point right below.',
+        'Clear packages: four detail levels with simple pricing and a highlighted “most popular” option, plus a ceramic coating section with its own price cards and a correction add-on.',
+        'Why mobile and proof: a side-by-side comparison with a typical car wash, and a results gallery of real vehicles with links to the brand’s social pages.',
+        'Easy booking: an FAQ that answers the common questions, and a request form with package selection next to direct text and call options.',
+      ],
+      showFeatures: true,
+      featureImages: [
+        '/images/projects/detailing-hero.webp',
+        '/images/projects/detailing-packages.webp',
+        '/images/projects/detailing-why.webp',
+        '/images/projects/detailing-booking.webp',
+      ],
+      overview:
+        'A one-page website I designed for a client’s mobile car detailing business in Arizona. The business needed a site that makes it easy to see what each package includes and to book quickly, so the design leads with text and call buttons, then walks through four clear packages with pricing, a ceramic coating section, a comparison with a typical car wash, a gallery of real results, an FAQ and a booking form.',
+      roleDetail: 'Designed the website, from the layout and visual style to the page sections and booking flow.',
+      thumbnailUrl: '/images/projects/detailing.webp',
+    },
+    {
       slug: 'trey-coffee-menu',
       name: 'Trey Coffee Roasters',
       tag: 'Menu design',
