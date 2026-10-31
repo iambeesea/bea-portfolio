@@ -173,15 +173,9 @@ export class PortfolioEngine extends EngineBase<EngineProps, ViewModel> {
         k = clamp(real - (ai - 1));
       if (k > 0 && k < 1) {
         sec.style.transform = 'translate3d(0,' + (-(1 - k) * sc.clientHeight).toFixed(1) + 'px,0)';
-        if (red) {
-          sec.style.clipPath = '';
-          sec.style.opacity = k.toFixed(3);
-        } else {
-          const r = 'circle(' + (4 + 150 * k * k).toFixed(2) + '% at 50% 48%)';
-          sec.style.clipPath = r;
-          sec.style.webkitClipPath = r;
-          sec.style.opacity = '';
-        }
+        sec.style.clipPath = '';
+        sec.style.webkitClipPath = '';
+        sec.style.opacity = (red ? k : k * k * (3 - 2 * k)).toFixed(3);
       } else if (sec.style.transform || sec.style.clipPath || sec.style.opacity) {
         sec.style.transform = '';
         sec.style.clipPath = '';
