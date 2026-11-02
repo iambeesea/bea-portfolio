@@ -211,7 +211,7 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                       <div
                         style={{
                           position: 'relative',
-                          aspectRatio: '4/3',
+                          aspectRatio: f?.image?.endsWith('.mp4') ? '9/16' : '4/3',
                           background: f?.image
                             ? 'var(--well)'
                             : 'repeating-linear-gradient(135deg,var(--well) 0 12px,var(--well2) 12px 24px)',
@@ -221,7 +221,18 @@ export function CaseStudy({ v }: { v: ViewModel }) {
                           color: 'var(--muted)',
                         }}
                       >
-                        {f?.image ? (
+                        {f?.image?.endsWith('.mp4') ? (
+                          // A feature image ending in .mp4 plays as a video; its poster is the same name under /images/projects/.
+                          <video
+                            src={f.image}
+                            poster={f.image.replace('/videos/', '/images/projects/').replace(/\.mp4$/, '.webp')}
+                            controls
+                            playsInline
+                            preload="none"
+                            aria-label={`${v.caseName} — ${f.text}`}
+                            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }}
+                          />
+                        ) : f?.image ? (
                           <Image
                             src={f.image}
                             alt={`${v.caseName} — ${f.text}`}

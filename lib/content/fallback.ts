@@ -324,6 +324,30 @@ export const fallbackContent: PortfolioContent = {
       thumbnailUrl: '/images/projects/community-site.webp',
     },
     {
+      slug: 'euro-link-industrial',
+      name: 'Euro Link Industrial',
+      tag: 'Video production',
+      role: 'Video Producer',
+      year: '2026',
+      org: '',
+      tags: ['Video production', 'Video Producer'],
+      ar: '16 / 10',
+      description:
+        'Three vertical product reels for the LVTOPSUN G4 home battery sold by Euro Link Industrial: a spec-led product reel, a trade-focused advert and a short explainer.',
+      stack: ['Kling', 'Nano Banana', 'ElevenLabs'],
+      features: [
+        'Product reel: the G4 shown almost the whole time in a premium UK home setting, with the real specs (16.07 kWh, 10.24 kW maximum discharge, IP65) and a trade call to action.',
+        'Power That Means Business: a trade-focused advert built around the product and its key numbers.',
+        'Did You Know: a short explainer on the difference between energy (kWh) and power (kW), told with animated graphics.',
+      ],
+      showFeatures: true,
+      featureImages: ['/videos/eurolink-reel-1.mp4', '/videos/eurolink-reel-2.mp4', '/videos/eurolink-reel-3.mp4'],
+      overview:
+        'A set of 9:16 reels made to promote the LVTOPSUN G4 home battery for Euro Link Industrial’s social media. Each reel is 28 to 38 seconds, with a voice-over, on-screen captions and the Euro Link and LVTOPSUN logos. I used the manufacturer’s own product renders so every label and port on the battery stays accurate, and made the scenes around them with AI image and video tools plus motion graphics.',
+      roleDetail: 'Planned the shots, wrote the scripts, produced the scenes, voice-over and captions, and edited the final reels.',
+      thumbnailUrl: '/images/projects/eurolink-industrial.webp',
+    },
+    {
       slug: 'trey-coffee-menu',
       name: 'Trey Coffee Roasters',
       tag: 'Menu design',
