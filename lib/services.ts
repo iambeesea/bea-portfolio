@@ -69,9 +69,11 @@ export const services: Service[] = [
     includes: [
       'Instagram and TikTok reels for brands',
       'Event highlights and behind-the-scenes edits',
+      'Product promo reels with AI-made scenes and a voice-over',
       'On-brand captions and text overlays',
     ],
-    tools: ['CapCut'],
+    tools: ['CapCut', 'Kling', 'Nano Banana', 'ElevenLabs'],
+    projects: ['euro-link-industrial'],
   },
 ];
 
@@ -89,7 +91,7 @@ export const automations = [
   },
 ];
 
-export const reels = [
+export const reels: { src: string; poster: string; width: number; height: number; label: string; autoplay?: boolean }[] = [
   {
     src: '/videos/rion-reel-entrance.mp4',
     poster: '/videos/rion-reel-entrance.webp',
@@ -103,5 +105,29 @@ export const reels = [
     width: 1024,
     height: 1280,
     label: 'RION Events: Teachers’ Day celebration',
+  },
+  {
+    src: '/videos/eurolink-reel-1.mp4',
+    poster: '/images/projects/eurolink-reel-1.webp',
+    width: 720,
+    height: 1280,
+    label: 'Euro Link Industrial: LVTOPSUN G4 product reel',
+    autoplay: false,
+  },
+  {
+    src: '/videos/eurolink-reel-2.mp4',
+    poster: '/images/projects/eurolink-reel-2.webp',
+    width: 720,
+    height: 1280,
+    label: 'Euro Link Industrial: Power That Means Business',
+    autoplay: false,
+  },
+  {
+    src: '/videos/eurolink-reel-3.mp4',
+    poster: '/images/projects/eurolink-reel-3.webp',
+    width: 720,
+    height: 1280,
+    label: 'Euro Link Industrial: Did You Know, energy vs power',
+    autoplay: false,
   },
 ];

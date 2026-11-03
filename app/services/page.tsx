@@ -164,9 +164,9 @@ export default async function ServicesPage() {
                             poster={reel.poster}
                             width={reel.width}
                             height={reel.height}
-                            autoPlay
-                            muted
-                            loop
+                            autoPlay={reel.autoplay !== false}
+                            muted={reel.autoplay !== false}
+                            loop={reel.autoplay !== false}
                             playsInline
                             controls
                             preload="metadata"
