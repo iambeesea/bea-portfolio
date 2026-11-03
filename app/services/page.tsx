@@ -93,7 +93,7 @@ export default async function ServicesPage() {
           const proof = (service.projects ?? []).map((s) => bySlug.get(s)).filter((p) => p !== undefined);
           return (
             <section key={service.id} id={service.id} aria-labelledby={`${service.id}-title`} className="border-t border-line">
-              <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+              <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
                 <div>
                   <p className="m-0 font-wide text-sm text-accent">{String(i + 1).padStart(2, '0')}</p>
                   <h2
@@ -155,9 +155,16 @@ export default async function ServicesPage() {
                   ) : null}
 
                   {service.id === 'reels' ? (
-                    <div className="grid grid-cols-2 items-start gap-4">
+                    <div
+                      role="group"
+                      aria-label="Reels, scroll sideways for more"
+                      className={`-mx-5 flex snap-x snap-mandatory items-start gap-3 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0 ${proof.length ? 'mt-4' : ''}`}
+                    >
                       {reels.map((reel) => (
-                        <figure key={reel.src} className="m-0 overflow-hidden rounded-2xl border border-line bg-panel">
+                        <figure
+                          key={reel.src}
+                          className="m-0 w-[150px] shrink-0 snap-start overflow-hidden rounded-2xl border border-line bg-panel sm:w-[170px]"
+                        >
                           <video
                             className="block h-auto w-full bg-well"
                             src={reel.src}
@@ -172,7 +179,7 @@ export default async function ServicesPage() {
                             preload="metadata"
                             aria-label={reel.label}
                           />
-                          <figcaption className="px-4 py-3 text-xs text-muted">{reel.label}</figcaption>
+                          <figcaption className="px-3 py-2.5 text-xs leading-snug text-muted">{reel.label}</figcaption>
                         </figure>
                       ))}
                     </div>
